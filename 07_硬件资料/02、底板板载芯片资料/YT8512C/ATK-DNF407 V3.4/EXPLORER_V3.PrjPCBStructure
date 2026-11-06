@@ -1,0 +1,6 @@
+Record=TopLevelDocument|FileName=AUDIO&ETHNET.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=AUDIO&ETHNET.SchDoc|FileName=CORE_ABC.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=AUDIO&ETHNET.SchDoc|FileName=CORE_DEFG.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=AUDIO&ETHNET.SchDoc|FileName=DEVICE1.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=AUDIO&ETHNET.SchDoc|FileName=DEVICE2.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=AUDIO&ETHNET.SchDoc|FileName=POWER&USB_USART.SchDoc|SheetNumber= 

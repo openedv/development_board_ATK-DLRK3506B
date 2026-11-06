@@ -1,0 +1,112 @@
+20230516 V3.4 (韩鸿翘)
+1，修改2*17排座孔径
+2，修改BOM与PCB不对应的位号及型号。修改版本丝印
+（PCB仅改动孔径，其他一样，除gerber外，其他资料都可使用V3.3版本）
+3，修改原理图版本为最新（20230525）
+
+20230401 V3.3 (韩鸿翘)
+1，修改输出电源电容容值和封装
+2，电源芯片换RY9125
+
+20230324 V3.3 (韩鸿翘)
+1，JW5060T电源芯片换SCT2230CTVB
+2，电源位置布局布线调整。
+
+20221008 V3.2（韩鸿翘/刘军）
+1，调整螺丝孔旁边的铺铜和线路
+2，网址换新的链接
+3，修改C24,C25名称为22
+4，修改C56为104
+5，修改C58为47uF
+6，修改C38/C39/C40/C41为1uF
+7，修改TFTLCD原理图封装，改用D0-D15命名，便于理解（20221023，刘军）
+8，修改C88/C89 0402/104更换为0402/10uF,并更新到BOM （20221031，韩鸿翘）
+9，调整原理图错误的位号标注
+
+20220928 V3.2(刘军)：
+1，IP101GR换成YT8512C
+2，所有IO要加上IO端口丝印
+3，USB C口的几个电阻，还是0603的，得改成0402
+4，ST480MS换成ST480MC
+5，将TFT_LCD接口原理图更改为统一DB0-DB15的新款原理图，避免歧义。
+6，C38-C41换成1uF电容，避免不兼容
+
+
+20211202 V3.1修改点：
+1，去掉R80
+2，R12换成5.6K
+3，USB座换成TYPE C座
+4，CAN接口芯片Vref脚加510R电阻上拉到3.3V
+5，ICM20608换成：ST480MS，位置放悟字那里（远离喇叭），去掉3D_INT信号
+6，去掉“悟”字
+7，型号改成：正点原子探索者
+             www.openedv.com
+8，按键上方topsolder层丝印改成：STM32F4
+9，背面丝印改成：ATK-DNF407 V3.1
+10，排母座子引脚封装改0.8mm/1.3mm
+11，修改耳机座插孔成0.8/1.2mm椭圆
+12，触摸按键logo换成 正点原子 LOGO
+13，丝印包边换成弧形
+
+
+
+
+探索者V3修改点：
+
+1,  OV7670接口改成  CAMERA, FIFO_xxx全部改成OV_xxx,            camera 接口用的是OV2640，信号是DCMI开头。已将信号名换为OV_xxx;   
+2,  摄像头接口,  SCCB_SDA和SCCB_SCL加4.7K上拉电阻                 pass
+3,  CH340G,  换CH340C，				 pass                          
+4,  0603/0805/1206,  全部换0402			pass
+5,  网络芯片LAN8720换成IP101G			pass
+6,  WM8978换成 ES8388+MD8002			pass
+7,  SP3485,  换成  TPT8485                                                          pass，仅修改value.    
+8,  SP3232,  换成  TPT3232                                                          pass，仅修改value.           
+9,  SMBJ5.0A,  换成SMFJ5.0CA                                                    pass，修改value, 更换封装.       
+10, SMBJ3.3,  换成SMFJ3.3CA                                                     pass，修改value. 更换封装.  
+11, SD卡换TF卡                                                                          pass，仅修改value.
+12，W25Q128， 换成25Q128                                                     pass，仅修改value.           
+13，红外接收头换成：LF0038GKLL			 pass，修改value, 更换封装.
+14，SRAM芯片改成：XM8A51216V33A                                       pass，仅修改value
+15，增加可调电位器，方式参考战舰			 pass.
+16，MPU6050 换成  ICM20608                                                   pass
+17，TJA1050 换成 SIT1050T                                                        pass，仅修改value
+
+
+18，从STM32接出来的信号线，加上复用的IO网络名；
+19，图纸全部用A4格式。
+20.  更换电源芯片为JW5060T;
+21.  露铜文字全换50/7mil 
+22.  USB_232丝印换成USB_UART;
+
+
+
+
+
+战舰V4修改点参考：
+
+1, 所有连接点要添加泪滴(加完再敷铜)
+2, USB_SLAVE / USB_UART / LSENSOR / BEEP / DS0 / DS1 / PWR / RV1 / RS485 / EARTHNET / COM2 / COM3 / CAN / WIRELESS / TF_CARD / K1 / USB/CAN / USART1 / USART2 / USART3 / TPAD / BOOT 改成 55/6 Serif
+3, RESET / KEY0 / KEY1 / KEY2 / KEY_UP 改成 40/5 Serif
+4, LINE_IN / PHONE / VOUT1 / VOUT2 / ON/OFF / DC 6~15V 改成 45/6 Serif
+5, DC 6~15V / RS485 / COM2 / COM3 / CAN 漏铜
+6, JTAG / TFT_LCD 改成 75/10 Serif, 都漏铜
+7, J1要靠近网络座放, 不要放到CH395旁边
+8, 考虑把RV1调整到 LINE_IN和P10之间, 把电容 C44 放里面来
+9, 丝印尽量不要放到过孔上面, 除非实在没办法. 个别不好放的丝印可以考虑稍微调小一点.
+10, U8 红外接收头, 换成小封装的, 和MiniPRO H750一样的封装.
+11, 正点原子LOGO丝印和www.openedv.com 要左右平齐, 然后高度和 STM32F4战舰V4平齐, 这几个LOGO可以考虑调小一点(不影响走线)
+12, WARSHIP 稍微上移一点
+13, AIN和 PDC改成top over layer层, 这里无法漏铜
+14, TFTLCD的引脚备注丝印 , 改成 32/5  Scan Serif
+15, P3的引脚备注丝印 , 改成 30/5  Scan Serif
+16, U5 / P10 / P11 / BOOT / VOUT1 / VOUT2 的引脚备注丝印 , 改成 38/6  Scan Serif
+17, P1 / P2 / P7 / P8 / P9 / P4 / P5的引脚备注丝印 , 改成 35/6  Scan Serif
+18, EARTHNET的丝印, 必须靠着网口放置
+19, 加防静电图标
+20, 敷铜间隙调大一点
+21, 敷铜放置连接过孔
+
+1, 原理图C70&R82, 公共端要接L11的输出, 以采集反馈电压. pcb图也要修改.
+2, 喇叭接线焊盘, 必须放喇叭音腔范围内
+3，USB_232丝印改成：USB_UART，原理图也改
+4，网络模块的RESET信号，要接下拉电阻
